@@ -1,24 +1,24 @@
-# 📋 PAGINIS - PDF FLIPBOOK CHANGELOG
+# 📋 ZAYA - PDF FLIPBOOK CHANGELOG
 
 ## 🎯 Recent Updates (Latest commits)
 
+- `zaya-rebrand` - Global rebranding to Zaya (2026-04-03)
+- `media-loop` - Integrated Auto Repeat for Audio/Video (2026-04-03)
+- `bug-fixes` - Resolved ReferenceErrors and SW 404s (2026-04-03)
 - `a1b2c3d` - fixed single page mode centering and lighting (2026-02-06)
-- `e5f6g7h` - implemented local audio support with custom UI (2026-02-06)
-- `i9j0k1l` - unified media player with mode switcher and refined UX (2026-02-06)
-- `m2n3o4p` - restored navigation arrows and keyboard shortcuts (2026-02-06)
-- `q5r6s7t` - automated mobile vs desktop single page adaptation (2026-02-06)
-- `130e86b` - loading gif change (2026-01-12)
-- `b4332cd` - no need it for load inside the index main (2026-01-12)
-- `8422982` - added the stats section here instead of the main HTML page (2026-01-12)
-- `0ec6953` - import themify-icons, min from here (2026-01-12)
-- `e40fea1` - HTML icons changing, stylesheet fix (2026-01-12)
-- `fdd01b5` - longer thumbnail, tighter width (2026-01-12)
-- `409d80e` - refactore, modernized the flipbook's zoom and scroll handling (2026-01-12)
-- `a914ab6` - scroll thumbnail up, down is conflicting with zoom in - out, fixed (2026-01-12)
-- `d01337b` - fix: rendering/loading problem resolved with applying optimization (2026-01-11)
-- `7a4b32c` - core refactoring at it's best (2026-01-11)
 
-### ✨ Latest Major Update - v5.1.1 Feature Expansion & Navigation Polish (2026-02-06)
+### ✨ Latest Major Update - v6.0.0 The Zaya Transition (2026-04-03)
+
+- **Global Rebranding**: Complete transition from Paginis to **Zaya**, including a new logo and a centralized naming convention for all variables and assets.
+- **Integrated Media Loop**: Added persistent "Auto Repeat" controls directly within the Audio player and Video control modals for better contextual access.
+- **Architectural Clarity**: Refactored the Service Worker system into a distinct `sw-manager.js` (UI-thread manager) and `sw.js` (background worker) for improved reliability and developer clarity.
+- **Enhanced Configuration**: Implemented support for `window.ZAYA_DEFAULT_PDF` and URL-based PDF loading (`?pdf=`) for easier deployment.
+- **Critical Stability Fixes**:
+  - Resolved `ReferenceError` crashes during local file imports in `media.js`.
+  - Fixed 404 errors for the root Service Worker file that prevented offline support.
+  - Eliminated race conditions during IndexedDB initialization in `db.js`.
+
+### ✨ Previous Major Update - v5.1.1 Feature Expansion & Navigation Polish (2026-02-06)
 
 - **Cinematic Single Page Mode**: Fixed 3D camera centering and implemented synchronized dynamic lighting to ensure focused pages are perfectly illuminated.
 - **Unified Media Player**: Redesigned the media section with a sleek mode switcher and custom themed audio player, eliminating unnecessary windows for audio content.
