@@ -1,4 +1,4 @@
-# Paginis
+# Zaya
 
 A PDF flipbook website designed to make your life easier. It can take a PDF as input and generate a flipbook, whether it's a URL, local file, or a featured YouTube playlist to play while reading.
 
@@ -7,7 +7,7 @@ A PDF flipbook website designed to make your life easier. It can take a PDF as i
 ## 📋 Changelog
 
 For a complete history of changes, features, and updates, please visit the changelog:
-**[View Changelog](https://paginis.vercel.app/changelog.html)**
+**[View Changelog](https://zaya.vercel.app/changelog.html)**
 
 ## Tech Stack
 
@@ -18,6 +18,44 @@ For a complete history of changes, features, and updates, please visit the chang
 ### Flipbook pages are not visible/defective in PDF
 
 Check the pdf if using the link Make sure that cross-origin resource sharing is enabled
+
+## 🔧 Custom Default PDF
+
+You can change the default PDF that loads when opening `index.html` in two ways:
+
+### Method 1: Edit `index.html`
+
+Find the commented-out script tag in the `<head>` section and uncomment it with your PDF URL:
+
+```html
+<script>window.ZAYA_DEFAULT_PDF = "https://your-server.com/your-document.pdf";</script>
+```
+
+You can also use a relative path if the PDF is on the same server:
+
+```html
+<script>window.ZAYA_DEFAULT_PDF = "./documents/my-book.pdf";</script>
+```
+
+### Method 2: URL Parameter
+
+Append `?pdf=` to the URL to load any PDF directly:
+
+```
+https://your-site.com/index.html?pdf=https://example.com/document.pdf
+```
+
+You can also specify a starting page:
+
+```
+https://your-site.com/index.html?pdf=https://example.com/document.pdf&page=5
+```
+
+> **Note:** Remote PDFs must have CORS enabled on their server for cross-origin loading to work.
+
+## 🔁 Media Loop
+
+The media player supports looping for both local audio files and YouTube videos/playlists. Toggle **Media Loop** in the Settings panel (control panel → Settings → Media Loop). The setting is remembered across sessions.
 
 ## File Structure
 
