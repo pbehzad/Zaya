@@ -3,15 +3,14 @@
  * Basic caching and fetch handling for offline support.
  */
 
-const CACHE_NAME = 'zaya-assets-v1';
+const CACHE_NAME = 'parham-zaya-assets-v2';
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/changelog.html',
-  '/lib/css/style.css',
-  '/lib/js/app.js',
-  '/assets/zaya.svg',
-  '/lib/fonts/themify.woff'
+  '/zaya/index.html',
+  '/zaya/changelog.html',
+  '/zaya/lib/css/style.css',
+  '/zaya/lib/js/app.js',
+  '/zaya/assets/zaya.svg',
+  '/zaya/lib/fonts/themify.woff'
 ];
 
 // Install event: Cache initial assets

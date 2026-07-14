@@ -1,5 +1,10 @@
 # Zaya
 
+> This fork provides the streamlined, monochrome inline-reader build used by
+> [parhambehzad.com](https://parhambehzad.com). It keeps Zaya's PDF.js/DFlip
+> engine and focused reading controls while removing the runtime Tailwind and
+> external font startup dependencies. See [FORK_NOTES.md](FORK_NOTES.md).
+
 A PDF flipbook website designed to make your life easier. It can take a PDF as input and generate a flipbook, whether it's a URL, local file, or a featured YouTube playlist to play while reading.
 
 ![Sample](/assets/captured.png)

@@ -3,15 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Zaya</title>
+  <title>PDF viewer — Parham Behzad</title>
+  <meta name="description" content="Interactive PDF viewer powered by Zaya">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="/assets/zaya.svg" alt="icon svg">
+  <link rel="icon" type="image/svg+xml" href="./assets/zaya.svg">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="lib/css/style.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="lib/css/inline-reader.css">
+  <link rel="stylesheet" href="lib/css/toastify.css">
 
   <!-- Custom PDF Configuration -->
   <!-- Uncomment and set your own PDF URL to change the default document: -->
@@ -21,29 +20,12 @@
 
 <body class="bg-gray-900 text-white">
 
-    <!-- GitHub Link -->
-    <div class="fixed top-4 right-4 z-50">
-        <a href="https://github.com/ibra-kdbra/Zaya" target="_blank" class="flex items-center px-3 py-3 bg-[var(--bg-tertiary)]
-    text-[var(--text-primary)] border border-[var(--border-primary)] rounded-lg shadow-md transition duration-300 hover:bg-[var(--bg-accent-hover)] hover:text-[var(--text-accent)]" title="GitHub Repository">
-            <i class="fab fa-github text-lg"></i>
-        </a>
-    </div>
-
     <!-- Unified Control Panel Toggle Button -->
     <div class="fixed top-20 right-4 z-50">
         <button id="toggleUnifiedPanelBtn" class="px-4 py-2 bg-[var(--bg-tertiary)] text-[var(--text-primary)] border border-[var(--border-primary)]
     rounded-lg shadow-md transition duration-300 hover:bg-[var(--bg-accent-hover)] hover:text-[var(--text-accent)]" title="Toggle Control Panel">
             <i class="fas fa-bars"></i>
         </button>
-    </div>
-
-    <!-- Version & Changelog Link -->
-    <div class="fixed bottom-4 left-4 z-50">
-        <a href="changelog.html" class="flex items-center px-4 py-2 bg-[var(--bg-tertiary)] text-[var(--text-primary)] border border-[var(--border-primary)]
-    rounded-lg shadow-md transition duration-300 hover:bg-[var(--bg-accent-hover)] hover:text-[var(--text-accent)] no-underline" title="View Changelog">
-            <i class="fas fa-code-branch text-blue-400 mr-2"></i>
-            <span id="currentVersion" class="font-mono text-sm" data-original="Loading...">Loading...</span>
-        </a>
     </div>
 
   <!-- Unified Right-Side Control Panel -->
@@ -255,7 +237,7 @@
   <div class="hover-trigger" id="bottomHoverTrigger"></div>
   <div id="customControlBar" class="always-shown">
     <button class="custom-ui-btn" id="customPrevBtn" title="Previous Page">
-      <i class="fas fa-chevron-left"></i>
+      <span aria-hidden="true">←</span>
     </button>
 
     <div class="page-indicator">
@@ -263,42 +245,42 @@
     </div>
 
     <button class="custom-ui-btn" id="customNextBtn" title="Next Page">
-      <i class="fas fa-chevron-right"></i>
+      <span aria-hidden="true">→</span>
     </button>
 
     <div class="h-8 w-px bg-gray-700 mx-2"></div>
 
     <button class="custom-ui-btn" id="customOutlineBtn" title="Toggle Outline">
-      <i class="fas fa-list-ul"></i>
+      <span aria-hidden="true">≡</span>
     </button>
 
     <button class="custom-ui-btn" id="customThumbnailBtn" title="Toggle Thumbnails">
-      <i class="fas fa-th-large"></i>
+      <span class="reader-grid-icon" aria-hidden="true"></span>
     </button>
 
     <div class="h-8 w-px bg-gray-700 mx-2 mobile-hide"></div>
 
     <button class="custom-ui-btn mobile-hide" id="customZoomOutBtn" title="Zoom Out">
-      <i class="fas fa-search-minus"></i>
+      <span aria-hidden="true">−</span>
     </button>
 
     <button class="custom-ui-btn mobile-hide" id="customZoomInBtn" title="Zoom In">
-      <i class="fas fa-search-plus"></i>
+      <span aria-hidden="true">+</span>
     </button>
 
     <div class="h-8 w-px bg-gray-700 mx-2 mobile-hide"></div>
 
     <button class="custom-ui-btn" id="customFullscreenBtn" title="Toggle Fullscreen">
-      <i class="fas fa-expand"></i>
+      <span aria-hidden="true">⛶</span>
     </button>
 
     <button class="custom-ui-btn mobile-hide" id="customShareBtn" title="Share">
-      <i class="fas fa-share-alt"></i>
+      <span aria-hidden="true">↗</span>
     </button>
 
     <div class="relative">
       <button class="custom-ui-btn" id="customMoreBtn" title="More Options">
-        <i class="fas fa-ellipsis-h"></i>
+        <span aria-hidden="true">•••</span>
       </button>
 
       <!-- More Menu Dropdown -->
